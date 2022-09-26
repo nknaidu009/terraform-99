@@ -10,7 +10,7 @@ resource "google_compute_network" "vpc_network" {
 }
 
 resource "google_compute_instance" "vm_instance" {
-  name         = "karthik-gcp"
+  name         = "karthik-gcp-01"
   machine_type = "e2-medium"
 
   boot_disk {
