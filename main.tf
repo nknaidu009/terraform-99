@@ -1,7 +1,7 @@
 provider "google" {
   credentials = "${file("account.json")}"
   project = "decoded-path-356013"
-  region  = "us-central1"
+  region  = var.region
   zone    = "us-central1-c"
 }
 
@@ -10,7 +10,7 @@ resource "google_compute_network" "vpc_network" {
 }
 
 resource "google_compute_instance" "vm_instance" {
-  name         = "karthik-terraform"
+  name         = "terra-jenk"
   machine_type = "e2-medium"
 
   boot_disk {
@@ -25,3 +25,4 @@ resource "google_compute_instance" "vm_instance" {
     }
   }
 }
+
